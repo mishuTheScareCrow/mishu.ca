@@ -11,8 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
+
   <body style="background-color: #212529">
-    <!-- <div class="welcome-words-holder">
+    <main class="w-100 overflow-hidden">
+      <div class="circular-animation -z-10">
+        <div class="circular-shape">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <circle
+              vector-effect="non-scaling-stroke"
+              cx="50"
+              cy="50"
+              r="50"
+              stroke-dasharray="0 22.43994752564138"
+              stroke-linecap="round"
+              stroke-width="2"
+            ></circle>
+          </svg>
+        </div>
+        <div class="circular-shape">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <circle
+              vector-effect="non-scaling-stroke"
+              cx="50"
+              cy="50"
+              r="50"
+              stroke-dasharray="0 22.43994752564138"
+              stroke-linecap="round"
+              stroke-width="2"
+            ></circle>
+          </svg>
+        </div>
+        <div class="circular-image">
+          <img class="rounded-full w-full" src="/public/images/logo_memoji.png" />
+        </div>
+      </div>
+      <!-- <div class="welcome-words-holder">
       <ul class="welcome-words">
         <li class="welcome-active welcome-active-first">Hello</li>
         <li class="welcome-active">Bonjour</li>
@@ -26,16 +59,57 @@
         <li class="welcome-active welcome-active-last">হ্যালো</li>
       </ul>
     </div> -->
-    <header class="p-4">
-      <div class="container mx-auto flex justify-between">
-        <div class="bg-white">Logo</div>
-        <div class="bg-white">Menus</div>
-        <div class="bg-white">Hamburger</div>
+      <header class="p-4 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+          <div>
+            <img class="rounded-full w-16 h-16" src="/public/images/logo_memoji.png" />
+          </div>
+          <div class="bg-white rounded-full p-1">
+            <ul class="list-none flex">
+              <li class="me-1">
+                <a href="#" class="block bg-gray-400 border border-transparent hover:bg-gray-500 px-5 py-2 rounded-full">Myself</a>
+              </li>
+              <li class="mx-1">
+                <a href="#" class="block border border-gray-400 hover:bg-gray-500 hover:border-transparent px-5 py-2 rounded-full">Works</a>
+              </li>
+              <li class="ms-1">
+                <a href="#" class="block border border-gray-400 hover:bg-gray-500 hover:border-transparent px-5 py-2 rounded-full"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button class="bg-white w-16 h-16 rounded-full flex justify-center items-center">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                width="24px"
+                height="24px"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="#000000"
+              >
+                <path d="M3 5H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3 12H16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3 19H21" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="name-flow-wrapper">
+        <div class="name-flow-inner">
+          <div class="name-flow glitch-wrapper">
+            <h1 class="name-flow-text glitch" data-text="Abdur Rahman (Mishu)">Abdur Rahman (Mishu)<span class="spacer">—</span></h1>
+          </div>
+          <div class="name-flow glitch-wrapper">
+            <h1 class="name-flow-text glitch" data-text="Abdur Rahman (Mishu)">Abdur Rahman (Mishu)<span class="spacer">—</span></h1>
+          </div>
+        </div>
       </div>
-    </header>
-    <main class="container mx-auto">
-      <h1 class="text-3xl font-bold" style="color: #00c795">mishu.</h1>
-      <p class="text-white"><small>Have patience. Good things take time to be launched!</small></p>
     </main>
   </body>
 </html>
