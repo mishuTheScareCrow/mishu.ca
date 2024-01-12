@@ -8,28 +8,18 @@ on:
   push:
     branches: ["prod"]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 jobs:
-  deploy:
+  build:
+    name: 🕳️ Ubuntu...
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy mishu.ca
-        uses: hengkx/ssh-deploy@v1.0.1
+      - name: 💞 Github actions...
+        uses: actions/checkout@v3
+      - name: 🌈 Deploy with ssh...
+        uses: sebastianjnuwu/ssh-action-deploy@v3
         with:
-          host: ${{ secrets.MISH_HOST }}
-          port: ${{ secrets.MISH_PORT }}
-          username: ${{ secrets.MISH_USERNAME }}
-          password: ${{ secrets.MISH_PASSWORD }}
-
-          script: |
-            cd ~/mishu/
-            git pull
-            cp .env.local .env.backup
-            cp .env.mishu .env.local
-            cp .env.mishu .env.test
-            composer install
-            bin/console doctrine:migrations:migrate --no-interaction
-            bin/console cache:clear        
-            echo "Deployment successful!"
+          IP: ${{ secrets.MISH_HOST }}
+          USER: ${{ secrets.MISH_USERNAME }}
+          KEY: ${{ secrets.MISH_PASSWORD }}
+          FOLDER: "/mishu/"
+          script: echo "Deployment successful!"
