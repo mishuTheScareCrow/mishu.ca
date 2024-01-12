@@ -21,5 +21,5 @@ jobs:
           IP: ${{ secrets.MISH_HOST }}
           USER: ${{ secrets.MISH_USERNAME }}
           KEY: ${{ secrets.MISH_PASSWORD }}
+          PORT: ${{ secrets.MISH_PORT }}
           FOLDER: "/mishu/"
-          script: echo "Deployment successful!"
