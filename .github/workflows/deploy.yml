@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy mishu.ca
-        uses: actions/checkout@v1
+        uses: actions/ssh-action@v0.1.4
         with:
           host: ${{ secrets.MISH_HOST }}
           port: ${{ secrets.MISH_PORT }}
