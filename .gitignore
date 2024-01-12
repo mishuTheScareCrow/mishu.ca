@@ -6,6 +6,9 @@
 public/css
 public/js
 
+## GitHub Action files ##
+.github
+
 ### Node ###
 # Logs
 logs
