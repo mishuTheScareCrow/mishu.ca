@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy mishu.ca
-        uses: appleboy/ssh-action@v1.0.3
+        uses: tiyee/action-ssh@release
         with:
           host: ${{ secrets.MISH_HOST }}
           port: ${{ secrets.MISH_PORT }}
