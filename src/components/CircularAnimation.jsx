@@ -1,4 +1,5 @@
 import centerImage from "../assets/images/logoMemoji.png";
+import blurryBg from "../assets/images/purple_blurry_bg.svg";
 import { Tilt } from "react-tilt";
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -152,6 +153,7 @@ export default function CircularAnimation() {
           <img className="rounded-full w-full" draggable="false" src={centerImage} />
         </Tilt>
       </div>
+      <img className="circular-image-bg" src={blurryBg} />
     </div>
   );
 }
