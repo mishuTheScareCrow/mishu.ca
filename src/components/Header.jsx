@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logoMemoji.png";
 export default function Header() {
   return (
@@ -9,19 +10,22 @@ export default function Header() {
         <div className="bg-white rounded-full p-1">
           <ul className="list-none flex">
             <li className="me-1">
-              <a href="#" className="block bg-gray-300 border border-transparent hover:bg-gray-400 px-5 py-2 rounded-full">
+              <Link to="/" className="block bg-gray-300 border border-transparent hover:bg-gray-400 px-5 py-2 rounded-full">
                 Myself
-              </a>
+              </Link>
             </li>
             <li className="mx-1">
-              <a href="#" className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full">
+              <Link to="/works" className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full">
                 Works
-              </a>
+              </Link>
             </li>
             <li className="ms-1">
-              <a href="#" className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full">
+              <Link
+                to="/contact"
+                className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
