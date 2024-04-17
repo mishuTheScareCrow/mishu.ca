@@ -379,7 +379,7 @@
   position: sticky;
   position: -webkit-sticky;
   top: 6rem;
-  border-radius: 2rem;
+  border-radius: 1.75rem;
   width: 100%;
   /* max-height: 80rem; */
   height: calc(100vh - 6rem);
@@ -391,7 +391,7 @@
 }
 
 .first .work-image-bg {
-  background-image: linear-gradient(109.6deg, rgba(102, 51, 153, 1) 11.2%, rgba(2, 0, 4, 1) 91.1%);
+  background-image: linear-gradient(106.9deg, rgba(100, 43, 115, 1) 60.9%, rgba(4, 0, 4, 1) 122.3%);
 }
 
 .second .work-image-bg {
@@ -399,9 +399,17 @@
 }
 
 .third .work-image-bg {
-  background-image: linear-gradient(108.7deg, rgba(221, 22, 224, 1) 11%, rgba(111, 22, 190, 1) 88.2%);
+  background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
 }
 
 .fourth .work-image-bg {
-  background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
+  background-image: linear-gradient(106.9deg, rgba(148, 14, 60, 1) 60.9%, rgba(3, 22, 27, 1) 122.3%);
+}
+
+/* Contact Page  */
+.contact-page {
+  height: calc(100vh - 8rem);
+  /* background-color: #d2d4da; */
+  background-color: #f5f5f7;
+  border-radius: 1.75rem;
 }
