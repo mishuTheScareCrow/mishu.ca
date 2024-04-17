@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logoMemoji.png";
+// import { useEffect, useRef, useState } from "react";
 export default function Header() {
+  // const [navHeight, setNavHeight] = useState(0);
+  // const ref = useRef(null);
+
+  // useEffect(() => {
+  //   setNavHeight(ref.current.clientHeight);
+  // });
+
+  const activeLinkNavigator = ({ isActive }) =>
+    isActive
+      ? "block border bg-gray-300 border-transparent hover:bg-gray-400 px-5 py-2 rounded-full"
+      : "block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full";
+
   return (
-    <header className="p-4 z-10">
+    //Add 'ref={ref}' to header tag
+    <header className="p-4 z-10 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <img className="rounded-full w-16 h-16" src={logo} />
@@ -10,22 +24,19 @@ export default function Header() {
         <div className="bg-white rounded-full p-1">
           <ul className="list-none flex">
             <li className="me-1">
-              <Link to="/" className="block bg-gray-300 border border-transparent hover:bg-gray-400 px-5 py-2 rounded-full">
+              <NavLink to="/" className={activeLinkNavigator}>
                 Myself
-              </Link>
+              </NavLink>
             </li>
             <li className="mx-1">
-              <Link to="/works" className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full">
+              <NavLink to="/works" className={activeLinkNavigator}>
                 Works
-              </Link>
+              </NavLink>
             </li>
             <li className="ms-1">
-              <Link
-                to="/contact"
-                className="block border border-gray-300 hover:bg-gray-400 hover:border-transparent px-5 py-2 rounded-full"
-              >
+              <NavLink to="/contact" className={activeLinkNavigator}>
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

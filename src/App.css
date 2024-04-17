@@ -365,3 +365,43 @@
   right: 0;
   pointer-events: none;
 }
+
+/* WorkPage */
+.cards {
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  grid-row-gap: 10rem;
+}
+
+.card {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 6rem;
+  border-radius: 2rem;
+  width: 100%;
+  /* max-height: 80rem; */
+  height: calc(100vh - 6rem);
+  overflow: hidden;
+}
+
+.work-description-bg {
+  background: #fbfbfb;
+}
+
+.first .work-image-bg {
+  background-image: linear-gradient(109.6deg, rgba(102, 51, 153, 1) 11.2%, rgba(2, 0, 4, 1) 91.1%);
+}
+
+.second .work-image-bg {
+  background-image: linear-gradient(86.3deg, rgba(0, 119, 182, 1) 3.6%, rgba(8, 24, 68, 1) 87.6%);
+}
+
+.third .work-image-bg {
+  background-image: linear-gradient(108.7deg, rgba(221, 22, 224, 1) 11%, rgba(111, 22, 190, 1) 88.2%);
+}
+
+.fourth .work-image-bg {
+  background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
+}
