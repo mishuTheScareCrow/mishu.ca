@@ -417,7 +417,7 @@ img {
 }
 
 .fourth .work-image-bg {
-  background-image: linear-gradient(106.9deg, rgba(148, 14, 60, 1) 60.9%, rgba(3, 22, 27, 1) 122.3%);
+  background-image: linear-gradient(109.6deg, rgba(96, 221, 142, 1) 11.2%, rgba(24, 138, 141, 1) 91.1%);
 }
 
 /* Contact Page  */
@@ -517,4 +517,337 @@ img {
 .sidenav .social-links {
   font-size: small;
   color: #fff;
+}
+
+/* Error Page */
+
+.not-found-page {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: medium;
+  font-family: monospace;
+}
+
+.not-found-page .error {
+  text-align: center;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: distortion-3 1s linear infinite;
+  animation: distortion-3 1s linear infinite;
+  overflow: default;
+}
+
+.not-found-page:after {
+  content: "error 404";
+  font-family: monospace;
+  font-size: 100px;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  -webkit-animation: distortion-1 0.2s linear infinite;
+  animation: distortion-1 0.2s linear infinite;
+}
+.not-found-page:before {
+  content: "error 404";
+  font-family: monospace;
+  font-size: 100px;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  -webkit-animation: distortion-2 0.2s linear infinite;
+  animation: distortion-2 0.2s linear infinite;
+}
+
+.not-found-page .info {
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 280px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  -webkit-animation: distortion-3 1s linear infinite;
+  animation: distortion-3 1s linear infinite;
+}
+
+.not-found-page .info:before {
+  content: "file not found";
+  font-family: monospace;
+  font-size: 100px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 100px;
+  opacity: 0;
+  color: white;
+  -webkit-animation: distortion-2 0.2s linear infinite;
+  animation: distortion-2 0.2s linear infinite;
+}
+
+.not-found-page .info:after {
+  content: "file not found";
+  font-family: monospace;
+  font-size: 100px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 0;
+  opacity: 0;
+  color: white;
+  -webkit-animation: distortion-1 0.2s linear infinite;
+  animation: distortion-1 0.2s linear infinite;
+}
+
+@-webkit-keyframes distortion-1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: -6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: 2px;
+  }
+}
+
+@keyframes distortion-1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: -6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: 2px;
+  }
+}
+
+@-webkit-keyframes distortion-2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: 6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: -2px;
+  }
+}
+
+@keyframes distortion-2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: 6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: -2px;
+  }
+}
+
+@-webkit-keyframes distortion {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1.7);
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(1.5);
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes distortion {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1.7);
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(1.5);
+    transform: scaleX(1.5);
+  }
+}
+
+@-webkit-keyframes distortion-3 {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(4);
+    transform: scaleY(4);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(10) rotate(60deg);
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+
+@keyframes distortion-3 {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(4);
+    transform: scaleY(4);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(10) rotate(60deg);
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+
+.not-found-page .wrap {
+  top: 30%;
+  left: 25%;
+
+  height: 200px;
+
+  margin-top: -100px;
+  position: absolute;
+}
+.not-found-page code {
+  color: white;
+}
+.not-found-page span.blue {
+  color: #48beef;
+}
+.not-found-page span.comment {
+  color: #7f8c8d;
+}
+.not-found-page span.orange {
+  color: #f39c12;
+}
+.not-found-page span.green {
+  color: #33cc33;
 }
