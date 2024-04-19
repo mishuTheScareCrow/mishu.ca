@@ -18,8 +18,11 @@ export default function Header() {
     //Add 'ref={ref}' to header tag
     <header className="p-4 z-10 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <img className="rounded-full w-16 h-16" src={logo} />
+        <div className="logo-container">
+          <img className="logo-image rounded-full w-16 h-16" src={logo} />
+          {/* <p className="logo-title text-white text-2xl">
+            [ <span className="font-bold">mishu.ca</span> ]
+          </p> */}
         </div>
         <div className="bg-white rounded-full p-1">
           <ul className="list-none flex">

@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
-import works1 from "../assets/images/works_bkash.png";
-export default function WorksCardContent({ projectSequence, projectTitle, projectType, projectURL, projectTags, projectDescription }) {
+export default function WorksCardContent({
+  projectSequence,
+  projectTitle,
+  projectType,
+  projectURL,
+  projectTags,
+  projectDescription,
+  projectImage,
+}) {
   return (
     <div className={`${projectSequence} card grid grid-flow-col auto-cols-fr`}>
       <div className="work-description-bg">
@@ -33,8 +40,8 @@ export default function WorksCardContent({ projectSequence, projectTitle, projec
           </div>
         </div>
       </div>
-      <div className="work-image-bg">
-        <img src={works1} />
+      <div className="work-image-bg flex justify-center">
+        <img src={projectImage} className="object-contain w-9/12 p-4" />
       </div>
     </div>
   );

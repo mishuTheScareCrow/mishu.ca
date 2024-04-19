@@ -1,3 +1,18 @@
+img {
+  pointer-events: none;
+}
+
+.logo-title {
+  font-family: monospace;
+}
+
+.logo-title {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .circular-animation {
   position: absolute;
   left: 0;
@@ -363,7 +378,6 @@
   bottom: 0%;
   left: 0%;
   right: 0;
-  pointer-events: none;
 }
 
 /* WorkPage */
@@ -412,4 +426,94 @@
   /* background-color: #d2d4da; */
   background-color: #f5f5f7;
   border-radius: 1.75rem;
+}
+
+/* SideNav */
+.sidenav {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  width: 256px;
+  transition: width 0.3s ease-in-out;
+  height: calc(100vh - 12rem);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(35px);
+  background-color: rgba(16, 9, 25, 0.4);
+  overflow: hidden;
+  padding-bottom: 2rem;
+  top: 6rem;
+  bottom: 6rem;
+}
+
+.sidenav:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  content: "";
+  height: 300%;
+  width: 300%;
+  left: -100%;
+  top: -110%;
+  opacity: 0.8;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(5%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(5%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.sidenavClosed {
+  composes: sidenav;
+  transition: width 0.3s ease-in-out;
+  width: 60px;
+}
+
+.sidenav a:hover {
+  background-color: rgba(30, 27, 75, 0.7);
+}
+
+.sidenav a[aria-current="page"] {
+  background-color: rgba(30, 27, 75, 0.4);
+}
+
+.sidebar-title {
+  background-color: rgba(30, 27, 75, 0.9);
+}
+
+.sidenav .social-links {
+  font-size: small;
+  color: #fff;
 }
