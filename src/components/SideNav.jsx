@@ -1,19 +1,13 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
 
-export default function SideNav() {
-  const [navOpen, setNavOpen] = useState(true);
-
-  const toggleOpen = () => {
-    setNavOpen(!navOpen);
-  };
-
+export default function SideNav({ navStatus }) {
+  console.log(navStatus);
   const activeLinkNavigator = ({ isActive }) =>
     isActive ? "block text-white ps-5 py-2 w-full font-semibold" : "block text-white ps-5 py-2 w-full font-semibold";
 
   return (
-    <div className={toggleOpen ? "sidenav" : "sidenavClosed"}>
+    <div className={navStatus ? "sidenav" : "sidenavClosed"}>
       <div>
         <div className="sidebar-title flex justify-between text-center text-white py-4">
           <span className="ps-2">[</span>

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logoMemoji.png";
 // import { useEffect, useRef, useState } from "react";
-export default function Header() {
+export default function Header({ onClick }) {
   // const [navHeight, setNavHeight] = useState(0);
   // const ref = useRef(null);
 
@@ -44,7 +44,7 @@ export default function Header() {
           </ul>
         </div>
         <div>
-          <button className="bg-white w-16 h-16 rounded-full flex justify-center items-center">
+          <button className="bg-white w-16 h-16 rounded-full flex justify-center items-center" onClick={onClick}>
             <svg
               width="24px"
               height="24px"
