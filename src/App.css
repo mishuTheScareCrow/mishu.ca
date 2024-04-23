@@ -86,7 +86,6 @@ img {
   left: 0;
   width: 100%;
   padding-bottom: 1.25vh;
-  bottom: 2vh;
   .name-flow-inner {
     position: relative;
     display: flex;
@@ -876,6 +875,12 @@ img {
 
   margin-top: -100px;
   position: absolute;
+  @media (max-width: 767.98px) {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
 }
 .not-found-page code {
   color: white;
@@ -891,4 +896,122 @@ img {
 }
 .not-found-page span.green {
   color: #33cc33;
+}
+
+/* Mobile Nav */
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  font-size: 12px;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  color: black;
+}
+
+.nav-item {
+  flex: 1 1 25%;
+  display: flex;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.nav-item .title {
+  display: inline-block;
+  color: transparent;
+  vertical-align: super;
+  margin-left: 4px;
+}
+
+.nav-item[aria-current="page"] {
+  flex: 1e-9 1e-8 auto;
+}
+.nav-item[aria-current="page"] .title {
+  color: inherit;
+}
+
+.nav-item[data-color="#5b37b7"][aria-current="page"] {
+  color: #5b37b7;
+  fill: #5b37b7 !important;
+  background: rgba(91, 55, 183, 0.3);
+}
+
+.nav-item[data-color="#c9379d"][aria-current="page"] {
+  color: #c9379d;
+  fill: #c9379d !important;
+  background: rgba(201, 55, 157, 0.3);
+}
+
+.nav-item[data-color="#e5a919"][aria-current="page"] {
+  color: #e5a919;
+  fill: #e5a919 !important;
+  background: rgba(229, 169, 25, 0.3);
+}
+
+.nav-item[data-color="#1194aa"][aria-current="page"] {
+  color: #1194aa;
+  fill: #1194aa !important;
+  background: rgba(17, 148, 170, 0.3);
+}
+
+.nav *[class^="icon-"] {
+  height: 18px;
+  width: 18px;
+}
+
+/* Not Found Mobile */
+.not-found-mobile {
+  animation: flickerAnimation 5s infinite;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-align: center;
+  cursor: vertical-text;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }

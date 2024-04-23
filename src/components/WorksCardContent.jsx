@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 export default function WorksCardContent({
   projectSequence,
   projectTitle,
@@ -9,7 +10,10 @@ export default function WorksCardContent({
   projectImage,
 }) {
   return (
-    <div className={`${projectSequence} card grid grid-flow-col auto-cols-fr`}>
+    <div
+      className={`${projectSequence} card grid grid-flow-row md:grid-flow-col auto-cols-fr`}
+      style={!isMobile ? { top: "6rem" } : { top: "2rem" }}
+    >
       <div className="work-description-bg">
         <div className="flex flex-col justify-between h-full px-8 pt-8 pb-10">
           <div>

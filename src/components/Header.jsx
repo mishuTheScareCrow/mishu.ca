@@ -16,7 +16,7 @@ export default function Header({ onClick }) {
 
   return (
     //Add 'ref={ref}' to header tag
-    <header className="p-4 z-10 sticky top-0">
+    <header className="py-4 z-10 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo-container">
           <img className="logo-image rounded-full w-16 h-16" src={logo} />

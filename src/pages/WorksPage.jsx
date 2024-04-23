@@ -99,12 +99,10 @@ export default function WorksPage() {
     },
   ];
   return (
-    <div className="container mx-auto">
-      <div className="cards" ref={main}>
-        {workInfo.map((work) => (
-          <WorksCardContent key={work.id} {...work} />
-        ))}
-      </div>
+    <div className="cards" ref={main}>
+      {workInfo.map((work) => (
+        <WorksCardContent key={work.id} {...work} />
+      ))}
     </div>
   );
 }
