@@ -5,6 +5,9 @@ import HomePage from "./pages/HomePage";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFoundPage";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
+const TRACKING_ID = "G-WT52RMW2M9";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +21,10 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Myself" });
+  }, []);
   return <RouterProvider router={router} />;
 }
 
