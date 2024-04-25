@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFoundPage";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 const TRACKING_ID = "G-WT52RMW2M9";
+import { Analytics } from "@vercel/analytics/react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +26,12 @@ function App() {
     ReactGA.initialize(TRACKING_ID);
     ReactGA.send({ hitType: "pageview", page: "/", title: "Myself" });
   }, []);
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Analytics />
+    </>
+  );
 }
 
 export default App;
